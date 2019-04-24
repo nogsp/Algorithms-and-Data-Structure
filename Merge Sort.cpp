@@ -59,7 +59,7 @@ int main() {
 		cin >> vet[i];
 	}
 	
-	merge_sort(vet, 0, vetn);
+	merge_sort(vet, 0, vetn-1);
 	
 	for(i=0;i<vetn;i++){
 		cout << vet[i] << " ";
