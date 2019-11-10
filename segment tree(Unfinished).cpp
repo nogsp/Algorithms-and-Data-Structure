@@ -43,16 +43,16 @@ public:
 	}
 
 	void update(int index, int tl, int tr, int pos, int new_val) {
-    	if (tl == tr) {
-       		segt[index] = new_val;
-    	} else {
-        	int tm = (tl + tr) / 2;
-        	if (pos <= tm)
-            	update(index*2, tl, tm, pos, new_val);
-        	else
-            	update(index*2+1, tm+1, tr, pos, new_val);
-        	segt[index] = segt[index*2] + segt[index*2+1];
-    	}
+    		if (tl == tr) {
+       			segt[index] = new_val;
+    		} else {
+        		int tm = (tl + tr) / 2;
+        		if (pos <= tm)
+         	   	update(index*2, tl, tm, pos, new_val);
+        		else
+           	 	update(index*2+1, tm+1, tr, pos, new_val);
+        		segt[index] = segt[index*2] + segt[index*2+1];
+    		}
 	}	
 };
 
@@ -92,16 +92,16 @@ public:
 	}
 
 	void update(int index, int tl, int tr, int pos, int new_val) {
-    	if (tl == tr) {
-       		segt[index] = new_val;
-    	} else {
-        	int tm = (tl + tr) / 2;
-        	if (pos <= tm)
-            	update(index*2, tl, tm, pos, new_val);
-        	else
-            	update(index*2+1, tm+1, tr, pos, new_val);
-        	segt[index] = min(segt[index*2], segt[index*2+1]);
-    	}
+    		if (tl == tr) {
+       			segt[index] = new_val;
+    		} else {
+        		int tm = (tl + tr) / 2;
+        		if (pos <= tm)
+         	   	update(index*2, tl, tm, pos, new_val);
+        		else
+         	   	update(index*2+1, tm+1, tr, pos, new_val);
+        		segt[index] = min(segt[index*2], segt[index*2+1]);
+    		}
 	}	
 };
 
