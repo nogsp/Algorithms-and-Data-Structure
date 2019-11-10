@@ -3,7 +3,7 @@
 #include <vector>
 #define pb push_back
 #define ll long long
-#define inf 1000001
+#define inf 1000001 //DEPENDS ON THE PROBLEM
 
 using namespace std;
 
