@@ -20,7 +20,7 @@ void BFS(Grafo& grafo, int x){
         for(i=0;i<v_size;i++){
             int u=grafo.matrix[v][i];
             if(u!=0&&grafo.mark[i]==NV){
-                grafo.mark[i]=VV;
+                grafo.mark[i]=VV; 
                 fila.push(i);
             }
         }
