@@ -24,7 +24,7 @@ void lovaszToggle(int vertex, int maxEnemyNumber) { // the vertex you begin and 
     bad.clear();
     getBad(vertex, maxEnemyNumber);
     while(!bad.empty()) {
-        int u = *(bad.begin()); // first element of bad 
+        int u = *(bad.begin()); // first element of bad  
         color[u] = !color[u]; // change color
         bad.erase(bad.begin()); // erase this element from bad
         for(auto v : grafo[u]) { // update the neighbors
