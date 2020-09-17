@@ -1,4 +1,5 @@
 public class Algorithms {
+	///////////// MAIN METHODS ///////////////
 	public int binarySearch(int arr[], int k) {
 		int l = 0;
 		int r = arr.length - 1;
@@ -11,7 +12,11 @@ public class Algorithms {
 		}
 		return -1;
 	}
-	public void merge(int arr[], int l, int r) {
+	public void mergeSort(int arr[], int l, int r) {
+		_mergeSort(arr, 0, r - 1);
+	}
+	//////////// AUX METHODS //////////////////
+	private void merge(int arr[], int l, int r) {
 		int[] temp = new int[r+1];
 		for(int i = l; i <= r; i++) {
 			temp[i] = arr[i];
@@ -31,15 +36,12 @@ public class Algorithms {
 			
 		}
 	}
-	public void _mergeSort(int arr[], int l, int r) {
+	private void _mergeSort(int arr[], int l, int r) {
 		if(l < r) {
 			int m = (l + r) / 2;
 			_mergeSort(arr, l, m);
 			_mergeSort(arr, m + 1, r);
 			merge(arr, l, r);
 		}
-	}
-	public void mergeSort(int arr[], int l, int r) {
-		_mergeSort(arr, 0, r - 1);
 	}
 }
