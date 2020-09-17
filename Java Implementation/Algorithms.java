@@ -42,6 +42,6 @@ public class Algorithms {
 			_mergeSort(arr, l, m);
 			_mergeSort(arr, m + 1, r);
 			merge(arr, l, r);
-		}
+		} 
 	}
 }
