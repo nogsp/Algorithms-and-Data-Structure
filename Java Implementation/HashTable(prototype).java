@@ -7,7 +7,7 @@ public class HashTable <E, T> {
 			this.header = header;
 			this.element = element;
 			this.deleted = false;
-		}
+		} 
 	}
 	private int size;
 	private int cnt;
