@@ -14,6 +14,7 @@ class MaxHeap {
 	public void push(Integer val) {
 		if(iterator == allocated) {
 			System.out.println("Heap is already full");
+			return;
 		}
 		heap[++iterator] = val;
 		int it = iterator;
